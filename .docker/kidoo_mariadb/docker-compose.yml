@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: password
+    volumes:
+      - ./mariadb_data:/var/lib/mysql:Z
+    ports:
+      - 3306:3306
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8888:8080

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
   <head>
     <title><%= content_for(:title) || "Kidoo" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -19,7 +19,7 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app %>
-    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "bootstrap.min", "ezForm", "launchModal" %>
   </head>
 
   <body>
