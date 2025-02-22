@@ -5,7 +5,7 @@ services:
     environment:
       MARIADB_ROOT_PASSWORD: password
     volumes:
-      - ./mariadb_data:/var/lib/mysql:Z
+      - ./data:/var/lib/mysql:rw
     ports:
       - 3306:3306
 

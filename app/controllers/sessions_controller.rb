@@ -4,6 +4,9 @@ class SessionsController < ApplicationController
   skip_before_action :verify_authenticity_token, :only => [:create]
 
   def new
+    if session[:user_id]
+      redirect_to "/dashboard"
+    end
   end
 
   def create
